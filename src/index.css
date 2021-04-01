@@ -28,31 +28,27 @@ body, html, #root{
     min-height: 100vh;
     background: #ddd;
 }
-
 .main-paper{
-    min-height: 50vh;
-    min-width: 50vw;
-    max-width: 65ch;
-    border-radius: 25px;
-    box-shadow: 0 0 20px 0 rgba(0,0,0,0.20);
+    height: 100vh;
+    width: 100vw;
     background: var(--bg);
     flex-direction: column;
-    padding: 3rem;
+    padding: 0 2rem;
 }
 
 .quotes{
     height: auto;
-    width: 80%;
+    width: 100%;
     text-align: justify;
-    line-height: 1.25;
-    font-size: 2rem;
+    line-height: 1;
+    font-size: 1.5rem;
     color: var(--secondary);
     margin-bottom: 0;
 }
 
 .quotes::before, .quotes::after{
     content: '"';
-    font-size: 1.25em;
+    font-size: 1em;
     color: var(--muted);
 }
 
@@ -60,7 +56,7 @@ body, html, #root{
     height: auto;
     width: 100%;
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: var(--secondary);
 }
 
@@ -68,8 +64,8 @@ body, html, #root{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 20%;
-    width: 75%;
+    height: auto;
+    width: 100%;
     padding: 1.5rem 0;
 }
 
@@ -93,4 +89,63 @@ body, html, #root{
     margin-top: 2rem;
     text-align: center;
     color: var(--secondary);
+}
+
+@media screen and (min-width: 768px){
+
+    .main-paper{
+        height: auto;
+        width: auto;
+        min-height: 50vh;
+        min-width: 50vw;
+        max-width: 65ch;
+        border-radius: 25px;
+        box-shadow: 0 0 20px 0 rgba(0,0,0,0.20);
+        background: var(--bg);
+        padding: 3rem;
+    }
+
+    .quotes{
+        height: auto;
+        width: 80%;
+        text-align: justify;
+        line-height: 1.25;
+        font-size: 2rem;
+        color: var(--secondary);
+        margin-bottom: 0;
+    }
+
+    .quotes::before, .quotes::after{
+        content: '"';
+        font-size: 1.25em;
+        color: var(--muted);
+    }
+
+    .author{
+        height: auto;
+        width: 100%;
+        text-align: center;
+        font-size: 1.25rem;
+        color: var(--secondary);
+    }
+
+    .btn-group{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 20%;
+        width: 75%;
+        padding: 1.5rem 0;
+    }
+
+    .btn{
+        all: unset;
+        cursor: pointer;
+        border: 1px solid var(--secondary);
+        padding: 0.75rem 1rem;
+        border-radius: 10px;
+        background: var(--primary);
+        color: var(--secondary);
+    }
+
 }

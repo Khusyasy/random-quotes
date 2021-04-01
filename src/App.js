@@ -24,9 +24,11 @@ function App() {
             });
     }
 
+    /* eslint-disable */
     useEffect(() => {
         getRandomQuotes();
     }, [])
+    /* eslint-enable */
 
     return (
         <div className="main-container center-all">
@@ -38,7 +40,7 @@ function App() {
                     <a className="btn" href={`https://twitter.com/intent/tweet?text="${quotes}" -${author}`}>Tweet this Quote</a>
                 </div>
                 <div className="attr">
-                    Quotes provided by <a href="https://goquotes.docs.apiary.io/" target="_blank">Go Quotes API</a>
+                    Quotes provided by <a href="https://goquotes.docs.apiary.io/" target="_blank" rel="noreferrer">Go Quotes API</a>
                 </div>
             </div>
         </div>

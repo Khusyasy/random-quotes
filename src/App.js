@@ -35,6 +35,9 @@ function App() {
                     <button className="btn" onClick={() => getRandomQuotes()}>Random Quotes</button>
                     <button className="btn">Share Quotes</button>
                 </div>
+                <div className="attr">
+                    Quotes provided by <a href="https://goquotes.docs.apiary.io/" target="_blank">Go Quotes API</a>
+                </div>
             </div>
         </div>
     );

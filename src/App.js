@@ -31,7 +31,7 @@ function App() {
                 <p className="author">{author}</p>
                 <div className="btn-group">
                     <button className="btn" onClick={() => getRandomQuotes()}>Random Quotes</button>
-                    <button className="btn">Share Quotes</button>
+                    <a className="btn" href={`https://twitter.com/intent/tweet?text="${quotes}" -${author}`}>Tweet this Quote</a>
                 </div>
                 <div className="attr">
                     Quotes provided by <a href="https://goquotes.docs.apiary.io/" target="_blank">Go Quotes API</a>

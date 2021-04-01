@@ -15,8 +15,12 @@ function App() {
             .then(res => res.json())
             .then(data => {
                 var quotes = data.quotes[0];
-                setQuotes(quotes.text);
-                setAuthor(quotes.author);
+                if (quotes.text.length + quotes.author.length < 277) {
+                    setQuotes(quotes.text);
+                    setAuthor(quotes.author);
+                } else {
+                    getRandomQuotes();
+                }
             });
     }
 
